@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Positioning helper class styles.
+ *
+**/
+@import "../variables/positioning";
+
+// Make use of the positioning mixin which uses these parameters:
+// position($x, $y, $xShift, $yShift, $zShift: 0, $deg: 0, $from: 'top', $xfrom: 'left')
+.top-right {
+  @include position(0, 0, 0, 0, 0, 0, 'top', 'right');
+}
+
+.top-left {
+  @include position(0, 0, 0, 0, 0, 0, 'top', 'left');
+}
+
+.bottom {
+  @include position(0, 0, 0, 0, 0, 0, 'bottom', 'left');
+
+  width: 100%;
+}
+
+.center {
+  @include center();
+}

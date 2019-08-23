@@ -1,0 +1,222 @@
+/*
+ * @file
+ * Grid styles.
+ *
+ * Grid framework based on https://github.com/kristoferjoseph/flexboxgrid
+ * as an adapatation from the SASS version: https://github.com/hugeinc/flexboxgrid-sass
+ *
+**/
+
+$grid-columns: 12;
+@import "variables/utilities";
+
+$breakpoints: md $screen-tablet $screen-tablet,
+  lg $screen-full $screen-full !default;
+
+.wrapper {
+  max-width: $grid-max-width;
+  margin: 0 auto;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+
+.container-fluid {
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+
+.row {
+  display: flex;
+  flex: 0, 1, auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-spacing * -0.5;
+  margin-left: $gutter-spacing * -0.5;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}
+
+@mixin col-common($gutter: $gutter-spacing) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $gutter-spacing * 0.5;
+  padding-left: $gutter-spacing * 0.5;
+}
+
+$name: sm;
+.col-#{$name} {
+  @include col-common;
+
+  flex-basis: auto;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$name}-#{$i} {
+    @include col-common;
+
+    flex-basis: 100% / $grid-columns * $i;
+    max-width: 100% / $grid-columns * $i;
+  }
+}
+
+@for $i from 0 through $grid-columns {
+  .col-#{$name}-offset-#{$i} {
+    @include col-common;
+
+    @if $i == 0 {
+      margin-left: 0;
+    }
+    @else {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+.col-#{$name} {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.start-#{$name} {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.center-#{$name} {
+  justify-content: center;
+  text-align: center;
+}
+
+.end-#{$name} {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.top-#{$name} {
+  align-items: flex-start;
+}
+
+.middle-#{$name} {
+  align-items: center;
+}
+
+.bottom-#{$name} {
+  align-items: flex-end;
+}
+
+.around-#{$name} {
+  justify-content: space-around;
+}
+
+.between-#{$name} {
+  justify-content: space-between;
+}
+
+.first-#{$name} {
+  order: -1;
+}
+
+.last-#{$name} {
+  order: 1;
+}
+
+.col-fill {
+  display: flex;
+  flex-direction: column;
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+
+  @media only screen and (min-width: $size) {
+    .container {
+      width: $container;
+    }
+
+    .col-#{$name} {
+      @include col-common;
+
+      flex-basis: auto;
+    }
+    @for $i from 1 through $grid-columns {
+      .col-#{$name}-#{$i} {
+        @include col-common;
+
+        flex-basis: 100% / $grid-columns * $i;
+        max-width: 100% / $grid-columns * $i;
+      }
+    }
+    @for $i from 0 through $grid-columns {
+      .col-#{$name}-offset-#{$i} {
+        @include col-common;
+        @if $i == 0 {
+          margin-left: 0;
+        }
+        @else {
+          margin-left: 100% / $grid-columns * $i;
+        }
+      }
+    }
+    .col-#{$name} {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+    }
+    .start-#{$name} {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .center-#{$name} {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .end-#{$name} {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    .top-#{$name} {
+      align-items: flex-start;
+    }
+
+    .middle-#{$name} {
+      align-items: center;
+    }
+
+    .bottom-#{$name} {
+      align-items: flex-end;
+    }
+
+    .around-#{$name} {
+      justify-content: space-around;
+    }
+
+    .between-#{$name} {
+      justify-content: space-between;
+    }
+
+    .first-#{$name} {
+      order: -1;
+    }
+
+    .last-#{$name} {
+      order: 1;
+    }
+  }
+}

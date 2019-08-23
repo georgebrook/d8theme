@@ -1,0 +1,43 @@
+/**
+ * @file
+ * Spacing variables.
+ *
+**/
+
+@import "../variables/colours";
+@import "../partials/effects";
+
+$grid-max-width: 1024px;
+$gutter-spacing: 1.6rem;
+$outer-margin:   16px;
+
+$screen-minimum: 320px;
+$screen-mobile:  480px;
+$screen-tablet:  768px;
+$screen-full:    1024px;
+
+$border: 0.1rem solid;
+$border-radius-small:  0.2rem;
+$border-radius-medium: 0.3rem;
+$border-radius-large:  0.5rem;
+$border-radius-round:  50%;
+
+@mixin outline-focus() {
+  outline: 0.2rem solid $brand;
+  outline-offset: 0.1rem;
+}
+
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/**
+ * @note
+ * When using this variable, bare in mind that
+ * the images are being referenced relative to the
+ * CSS file where the folder structure mimics the
+ * SCSS folder structure.
+ *
+**/
+$images: 'dist/images';

@@ -1,0 +1,63 @@
+/**
+ * @file
+ * Colour variables.
+ *
+* */
+
+// Variables set for black and white vars.
+$black: #000;
+$white: #fff;
+
+/**
+ * Buttons and links.
+ */
+$brand: #9E0059;
+$brand--hover: darken($brand, 5%);
+$brand--active: #EE266D;
+
+/**
+ * General colours.
+ */
+$body-copy: grey;
+$scaled-bg: $white;
+$widget-bg: $white;
+
+$header-bg: grey;
+$footer-bg: grey;
+$key-line: #E1E2E3;
+
+$status-colour: $brand;
+$warning-colour: #BC9109;
+$error-colour: #E0001B;
+
+/**
+ * Social colours.
+ */
+$twitter: #55ACEE;
+$twitter--hover: #4081B2;
+$twitter--active: #5CB8FF;
+
+$facebook: #3B5998;
+$facebook--hover: #283B66;
+$facebook--active: #4668B2;
+
+$instagram: #BC2A8D;
+$instagram--hover: #8B074E;
+$instagram--active: #CC49A6;
+
+$yt-red: #E52D27;
+$yt-red--hover: #B31217;
+$yt-red--active: #CD201F;
+
+$google-red: #DB4437;
+$google-red--hover: #B34439;
+$google-red--active: #E06055;
+
+$whatsapp: #25D366;
+$whatsapp--hover: #075E54;
+$whatsapp--active: #128C7E;
+
+/**
+ * Helper colour vars.
+ */
+$border-color: grey;

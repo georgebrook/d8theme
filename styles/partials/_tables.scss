@@ -1,0 +1,160 @@
+/**
+ * @file
+ * Table styles.
+ *
+**/
+@import "../variables/colours";
+@import "../variables/typography";
+@import "../variables/utilities";
+
+table {
+  width: 100%;
+  margin-bottom: $gutter-spacing;
+  margin-top: $gutter-spacing;
+  border-right: $border $key-line;
+  border-left: $border $key-line;
+  border-bottom: $border $key-line;
+  @media (min-width: $screen-tablet) {
+    border: $border $key-line;
+  }
+
+  tr {
+    th,
+    td {
+      padding: ($gutter-spacing / 2) $gutter-spacing;
+      @media (min-width: $screen-tablet) {
+        border: 1px solid $key-line;
+      }
+    }
+  }
+
+  thead tr {
+    th,
+    td {
+      background: grey;
+      color: $brand;
+      font-size: $font-size-h3;
+      border-bottom-width: 0;
+    }
+  }
+
+  tr th {
+    color: $brand;
+    font-size: $font-size-h3;
+    border-bottom-width: 0;
+  }
+
+  tr {
+    th,
+    td {
+      vertical-align: top;
+      border-top: 1px solid $key-line;
+    }
+  }
+
+  th {
+    text-align: left;
+    vertical-align: bottom;
+  }
+
+  > tbody + tbody {
+    border-top: 2px solid $key-line;
+  }
+
+  table {
+    background-color: $white;
+  }
+}
+
+.responsive-table {
+  width: 100%;
+
+  thead {
+    text-align: left;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    @media (min-width: $screen-tablet) {
+      clip: auto;
+      display: table-header-group;
+      height: auto;
+      overflow: auto;
+      position: relative;
+      width: auto;
+    }
+  }
+
+  tbody {
+    @media (min-width: $screen-tablet) {
+      display: table-row-group;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td {
+      display: block; // For browsers that don't support flexbox
+      display: flex;
+      justify-content: space-between;
+      vertical-align: middle;
+
+      @media (min-width: $screen-tablet) {
+        display: table-cell;
+        padding-right: initial;
+      }
+    }
+
+    .table-heading {
+      font-weight: 700;
+      text-align: left;
+      padding-right: 1em;
+      color: $brand;
+      display: block;
+
+      @media (min-width: $screen-tablet) {
+        display: none;
+      }
+    }
+
+    tr {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-tablet) {
+        display: table-row;
+      }
+
+      th {
+        text-align: right;
+
+        @media (min-width: $screen-tablet) {
+          text-align: left;
+        }
+      }
+
+      td {
+        min-width: 1px;
+        text-align: right;
+
+        @media (min-width: $screen-tablet) {
+          text-align: left;
+        }
+
+        &.numeric {
+          text-align: left;
+
+          @media (min-width: $screen-tablet) {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+name: Drupal 8 Theme
+type: theme
+description: 'Drupal 8 Theme'
+core: 8.x
+base theme: classy
+
+regions:
+  header: Header
+  breadcrumb: Breadcrumb
+  sidebar_left: Side Bar Left
+  sidebar_righr: Side Bar Right
+  content: Content
+  footer: Footer
+
+libraries:
+  - theme/core
+
+  # Component libraries below should only be loaded
+  # when/where the component is present.
+  # - gla_estate/accordion
+
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/action-links.css: false
+        css/components/breadcrumb.css: false
+        css/components/button.css: false
+        css/components/collapse-processed.css: false
+        css/components/container-inline.css: false
+        css/components/details.css: false
+        css/components/exposed-filters.css: false
+        css/components/field.css: false
+        css/components/form.css: false
+        css/components/icons.css: false
+        css/components/inline-form.css: false
+        css/components/item-list.css: false
+        css/components/link.css: false
+        css/components/links.css: false
+        css/components/menu.css: false
+        css/components/more-link.css: false
+        css/components/pager.css: false
+        css/components/tabledrag.css: false
+        css/components/tableselect.css: false
+        css/components/tablesort.css: false
+        css/components/tabs.css: false
+        css/components/textarea.css: false
+        css/components/ui-dialog.css: false
+
+  classy/book-navigation:
+    css:
+      component:
+        css/components/book-navigation.css: false
+
+  classy/dialog:
+    css:
+      component:
+        css/components/dialog.css: false
+
+  classy/dropbutton:
+    css:
+      component:
+        css/components/dropbutton.css: false
+
+  classy/file:
+    css:
+      component:
+        css/components/file.css: false
+
+  classy/forum:
+    css:
+      component:
+        css/components/forum.css: false
+
+  classy/image-widget:
+    css:
+      component:
+        css/components/image-widget.css: false
+
+  classy/indented:
+    css:
+      component:
+        css/components/indented.css: false
+
+  classy/messages:
+    css:
+      component:
+        css/components/messages.css: false
+
+  classy/node:
+    css:
+      component:
+        css/components/node.css: false
+
+  classy/progress:
+    css:
+      component:
+        css/components/progress.css: false
+
+  classy/search-results:
+    css:
+      component:
+        css/components/search-results.css: false
+
+  classy/user:
+    css:
+      component:
+        css/components/user.css: false
+
+  system/base: false

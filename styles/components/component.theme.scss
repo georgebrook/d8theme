@@ -1,0 +1,42 @@
+/**
+ * @file
+ * General component styles.
+ *
+**/
+
+@import "../variables/colours";
+@import "../variables/typography";
+
+.component {
+  background: $white;
+
+  .form-item > label,
+  legend {
+    color: $brand;
+    font-size: $font-size-h4;
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.component__link {
+  font-size: $font-size-h4;
+}
+
+.component__link span {
+  color: $brand;
+}
+
+.component__image--no-image {
+  background: $key-line;
+}
+
+.component__text {
+  blockquote {
+    color: $black;
+    font-weight: 400;
+    margin-left: 0;
+    font-size: $font-size-base;
+  }
+}

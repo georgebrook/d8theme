@@ -1,0 +1,56 @@
+/**
+ * @file
+ * Main layout styles.
+ *
+**/
+@import "../variables/utilities";
+@import "../variables/colours";
+
+body {
+  transform: translateX(100px);
+}
+
+.skip-link {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  color: $brand;
+
+  &:active,
+  &:focus {
+    @include outline-focus();
+
+    position: static;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+  }
+}
+
+.site-content {
+  position: relative;
+}
+
+.page-wrapper {
+  padding-top: 9rem;
+  height: 100%;
+
+  .main-content {
+    padding: $gutter-spacing;
+    margin: $gutter-spacing 0;
+  }
+}
+
+.clear-page .heading--title {
+  margin-bottom: $gutter-spacing * 2;
+}
+
+@media (min-width: $screen-tablet) {
+  .page-wrapper {
+    padding-top: 19rem;
+  }
+  .clear-page .heading--title {
+    margin-bottom: $gutter-spacing * 2;
+  }
+}

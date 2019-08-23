@@ -1,0 +1,48 @@
+/**
+ * @file
+ * Styleguide styles.
+ *
+ * Used for demonstrative purposes only.
+ *
+**/
+
+@import "variables/colours";
+@import "variables/utilities";
+@import "variables/typography";
+
+.styleguide {
+  .box {
+    border-radius: $border-radius-small;
+    position: relative;
+    height: 7rem;
+    margin-bottom: 0.5rem;
+    background: grey;
+    text-align: center;
+    color: $white;
+    padding: $gutter-spacing;
+    .box {
+      height: 3.7rem;
+      background: grey;
+    }
+  }
+  .box--large {
+    height: 20rem;
+  }
+  .box--colour {
+    height: 8rem;
+    width: 8rem;
+    border: $border $key-line;
+  }
+  .section {
+    margin-bottom: $gutter-spacing;
+    .heading {
+      color: $brand;
+      padding-bottom: $gutter-spacing;
+      border-bottom: $border $brand;
+      margin-bottom: $gutter-spacing * 2;
+    }
+  }
+  .section--colours p {
+    word-break: break-all;
+  }
+}

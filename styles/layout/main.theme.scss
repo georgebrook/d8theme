@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Main theme layout styles.
+ *
+**/
+
+@import "../variables/colours";
+
+.page-wrapper {
+  background: grey;
+  .main-content {
+    background: $white;
+  }
+}

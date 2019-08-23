@@ -1,0 +1,24 @@
+core:
+  css:
+    layout:
+      dist/css/reset.min.css: {}
+      dist/css/grid.min.css: {}
+      dist/css/core.min.css: {}
+      dist/css/layout/base.min.css: {}
+    theme:
+      dist/css/layout/base.theme.css: {}
+
+  js:
+    dist/js/base.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+component:
+  css:
+    component:
+      dist/css/components/component.css: {}
+    theme:
+      dist/css/components/component.theme.css: {}
+

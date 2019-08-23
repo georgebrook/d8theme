@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Effect styles.
+ *
+**/
+
+$bezier: cubic-bezier(0.79, 0.81, 0.82, 0.19);
+$smooth: ease-in-out;
+
+@mixin transition($speed: 0.25, $type: $smooth, $property: all) {
+  transition: #{$speed + 's'} $property $type;
+  &:hover,
+  &:focus {
+    transition: #{$speed + 's'} $property $type;
+  }
+}

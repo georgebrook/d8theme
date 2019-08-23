@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Positioning helper mixins.
+ *
+**/
+
+@mixin position($x, $y, $xShift, $yShift, $zShift: 0, $deg: 0, $from: 'top', $xfrom: 'left') {
+  position: absolute;
+  transform: translate($xShift, $yShift) translateZ($zShift) rotate($deg);
+  @if $xfrom == 'left' {
+    left: $x;
+  }
+  @else {
+    right: $x;
+  }
+  @if $from == 'top' {
+    top: $y;
+  }
+  @else {
+    bottom: $y;
+  }
+}
+
+@mixin center {
+  @include position(50%, 50%, -50%, -50%);
+}

@@ -1,0 +1,132 @@
+/**
+ * @file
+ * Custom checkbox and radio styles.
+ *
+**/
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-left: 0;
+}
+
+.check-custom * {
+  box-sizing: border-box;
+}
+
+.check-custom {
+  position: relative;
+  display: block;
+  margin-right: 1rem;
+  line-height: 1;
+}
+
+.check-custom input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 1rem;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  &:focus {
+    + .state {
+      @include outline-focus();
+    }
+  }
+}
+
+.check-custom .state label {
+  line-height: 24px;
+  position: initial;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  min-width: calc(1rem + 6px);
+}
+
+.check-custom .state label::after,
+.check-custom .state label::before {
+  content: '';
+  width: calc(1rem + 6px);
+  height: calc(1rem + 6px);
+  display: block;
+  box-sizing: border-box;
+  border-radius: $border-radius-small;
+  border: $border grey;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  top: 4px;
+  background-color: $white;
+}
+
+.check-custom .state {
+  padding-left: 2.5rem;
+  position: relative;
+  display: inline-block;
+
+  label::before {
+    border-color: grey;
+  }
+}
+
+.check-custom.check-default:not(.check-round) input:checked ~ .state label::after {
+  content: '';
+  width: 6px;
+  height: 10px;
+  background: transparent;
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  left: 5px;
+  border-radius: 0;
+  top: 6px;
+}
+
+.check-custom.check-default:not(.check-round) input:checked ~ .state label::before {
+  background: grey;
+}
+
+.check-custom input[disabled] {
+  cursor: not-allowed;
+  display: none;
+}
+
+.check-custom input[disabled] ~ * {
+  opacity: 0.5;
+}
+
+.check-custom.check-round .state label::after,
+.check-custom.check-round .state label::before {
+  border-radius: 100%;
+  top: 5px;
+}
+
+.check-custom.check-round input:checked ~ .state label::before {
+  background: grey;
+}
+
+.check-custom.check-round input:checked ~ .state label::after {
+  background: $white;
+  transform: scale(0.5);
+}
+
+@media print {
+  .check-custom .state .icon,
+  .check-custom .state label::after,
+  .check-custom .state label::before,
+  .check-custom .state::before {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.checkbox-link {
+  z-index: 20;
+}

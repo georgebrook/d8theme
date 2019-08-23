@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Drupal related override styles.
+ *
+ * Remove the admin theme for smaller screens to avoid interferences.
+ *
+**/
+
+@media (max-width: 1070px) {
+  .edit-tabs {
+    display: none !important;
+  }
+  .toolbar-oriented .toolbar-tray-vertical.is-active {
+    display: none;
+  }
+
+  body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+    margin: 0 !important;
+  }
+
+  #toolbar-administration {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1070px) {
+  .toolbar-horizontal {
+    .header {
+      top: 3.9rem;
+    }
+
+    &.toolbar-tray-open {
+      .header {
+        top: 7.9rem;
+      }
+    }
+  }
+}

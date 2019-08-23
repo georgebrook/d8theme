@@ -1,0 +1,477 @@
+/**
+ * @file
+ * Typography styles.
+ *
+**/
+@import "../variables/typography";
+@import "../variables/colours";
+@import "../variables/utilities";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $font-family-base;
+}
+
+body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  ::-moz-selection {
+    background: $brand--active;
+    color: $white;
+  }
+
+  ::selection {
+    background: $brand--active;
+    color: $white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-weight: bold;
+}
+
+h1,
+.heading--title {
+  font-size: $font-size-h1-mobile;
+  margin: $font-size-h1-mobile / 2 0 $font-size-h1-mobile / 2;
+  line-height: $line-height-base * 1.5;
+}
+
+h2,
+.heading--main {
+  font-size: $font-size-h2-mobile;
+  margin: $font-size-h2-mobile 0 $font-size-h2-mobile / 2;
+  line-height: $line-height-base * 1.4;
+}
+
+h3,
+.heading--sub {
+  font-size: $font-size-h3-mobile;
+  margin: $font-size-h3-mobile 0 $font-size-h3-mobile / 2;
+  line-height: $line-height-base * 1.3;
+}
+
+h4,
+h5,
+h6,
+.heading--small {
+  font-size: $font-size-h4-mobile;
+  margin: $font-size-h4-mobile 0 $font-size-h4-mobile / 2;
+  line-height: $line-height-base * 1.2;
+}
+
+h2,
+.heading--main {
+  font-size: $font-size-h2-mobile;
+  margin: $font-size-h2-mobile 0 $font-size-h2-mobile / 2;
+  line-height: $line-height-base * 1.4;
+}
+
+h3,
+.heading--sub {
+  font-size: $font-size-h3-mobile;
+  margin: $font-size-h3-mobile 0 $font-size-h3-mobile / 2;
+  line-height: $line-height-base * 1.3;
+}
+
+h4,
+h5,
+h6,
+.heading--small {
+  font-size: $font-size-h4-mobile;
+  margin: $font-size-h4-mobile 0 $font-size-h4-mobile / 2;
+  line-height: $line-height-base * 1.2;
+}
+
+.heading--alt {
+  color: $brand;
+}
+
+.heading--text {
+  font-size: $font-size-base;
+  margin: inherit;
+  line-height: inherit;
+  font-weight: 400;
+}
+
+p {
+  color: $black;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: $gutter-spacing / 2;
+}
+
+// For block-level where a block-level element isn't allowed, e.g. in a paragraph.
+.block-text {
+  display: block;
+  margin-top: $gutter-spacing / 2;
+}
+
+.soft-text {
+  font-weight: 400;
+  color: grey;
+}
+
+.text--mayoral {
+  color: $brand;
+}
+
+@media (min-width: $screen-mobile) {
+  h1,
+  .heading--title {
+    font-size: $font-size-h1;
+    line-height: $line-height-large;
+  }
+  h2,
+  .heading--main {
+    font-size: $font-size-h2;
+  }
+  h3,
+  .heading--sub {
+    font-size: $font-size-h3;
+  }
+  h4,
+  h5,
+  h6,
+  .heading--small {
+    font-size: $font-size-h4;
+  }
+  .heading--text {
+    font-size: $font-size-base;
+  }
+}
+
+// Typography helper classes.
+small,
+.small {
+  font-size: $font-size-small - 0.1;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-mayoral {
+  color: $brand;
+}
+
+// Unordered and Ordered lists.
+.site-content {
+  ul:not(.list-unstyled) {
+    margin-top: $gutter-spacing;
+    padding-left: 0;
+    margin-left: $gutter-spacing;
+
+    li {
+      position: relative;
+      padding-left: $gutter-spacing * 2;
+      margin-bottom: $gutter-spacing;
+    }
+
+    ul:not(.list-unstyled) {
+      margin-left: 0;
+      margin-top: $gutter-spacing;
+    }
+
+    &.message__list {
+      margin: 0;
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol:not(.list-unstyled) {
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: $gutter-spacing * 2;
+
+    li {
+      padding-left: $gutter-spacing;
+      margin-bottom: $gutter-spacing;
+    }
+
+    ol:not(.list-unstyled) {
+      margin-top: $gutter-spacing;
+      margin-left: $gutter-spacing;
+    }
+
+    ul:not(.list-unstyled) {
+      margin-top: $gutter-spacing;
+      margin-left: 0;
+
+      li {
+        padding-left: $gutter-spacing * 2;
+      }
+    }
+  }
+
+  ul:not(.list-unstyled) li {
+    list-style: none;
+
+    &::before {
+      content: '●';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      color: $body-copy;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+// Description lists.
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $gutter-spacing / 2;
+}
+
+// List options.
+.list-unstyled {
+  @include list-unstyled;
+}
+
+.visually-hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.separator {
+  width: 100%;
+  display: block;
+  margin: $gutter-spacing 0;
+  height: 0.1rem;
+  background: $key-line;
+}
+
+// Description lists.
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $gutter-spacing / 2;
+}
+
+// List options.
+.list-unstyled {
+  @include list-unstyled;
+}
+
+// Inline turns list items into inline-block.
+.list-inline {
+  @include list-unstyled;
+
+  margin-left: -0.5rem;
+
+  > li {
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+// Well.
+.well {
+  background-color: grey;
+  color: $black;
+  font-size: $font-size-base;
+  font-weight: normal;
+  margin: $gutter-spacing 0;
+  padding: $gutter-spacing;
+  padding-bottom: $gutter-spacing / 2;
+
+  // Remove padding from immediate heading elements.
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    margin-top: 0;
+  }
+}
+
+// Blockquotes.
+blockquote,
+.blockquote {
+  margin: $gutter-spacing $gutter-spacing;
+  font-size: $font-size-h3;
+  color: $brand;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+
+  footer {
+    margin-top: $gutter-spacing;
+  }
+
+  cite {
+    &::before {
+      content: '— ';
+    }
+
+    display: block;
+  }
+}
+
+@media (min-width: $screen-mobile) {
+  blockquote,
+  .blockquote {
+    margin: $gutter-spacing $gutter-spacing * 2;
+  }
+
+  .well {
+    margin: $gutter-spacing 0;
+  }
+}
+
+// Blockquotes.
+blockquote,
+.blockquote {
+  margin: $gutter-spacing $gutter-spacing;
+  font-size: $font-size-h3;
+  color: $brand;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+
+  footer {
+    margin-top: $gutter-spacing;
+  }
+
+  cite {
+    &::before {
+      content: '— ';
+    }
+
+    display: block;
+  }
+}
+
+@media (min-width: $screen-mobile) {
+  blockquote,
+  .blockquote {
+    margin: $gutter-spacing $gutter-spacing * 2;
+  }
+}
+
+// Links.
+.site-content {
+  a {
+    font-weight: bold;
+    color: $brand;
+
+    &:hover {
+      color: $brand--hover;
+    }
+
+    &:active,
+    &:focus {
+      color: $brand--active;
+      @include outline-focus();
+    }
+
+    &.button {
+      line-height: $gutter-spacing;
+    }
+  }
+}
+
+.link {
+  font-weight: bold;
+  color: $brand;
+  text-decoration: underline;
+  padding: 0;
+
+  &:hover {
+    color: $brand--hover;
+  }
+
+  &:active,
+  &:focus {
+    color: $brand--active;
+    @include outline-focus();
+  }
+
+  &.button {
+    line-height: $gutter-spacing;
+    background: transparent;
+    border: 0;
+  }
+}
+
+.link--edit {
+  background: url('../../#{$images}/common/icon-edit.svg') no-repeat left center;
+  padding-left: 2.2rem;
+  background-size: contain;
+}
+
+.link--chevron-next {
+  background: url('../../#{$images}/common/chevron--mayoral.svg') no-repeat right 0.2rem;
+  padding-right: 1.4rem;
+  background-size: 0.8rem;
+}
+
+.link--chevron-back {
+  background: url('../../#{$images}/common/chevron--mayoral--left.svg') no-repeat left 0.2rem;
+  padding-left: 1.4rem;
+  background-size: 0.8rem;
+}

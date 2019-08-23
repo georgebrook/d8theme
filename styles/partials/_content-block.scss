@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Content block styles.
+ *
+**/
+
+@import "../variables/utilities";
+@import "../variables/colours";
+
+.content-block {
+  background-color: $white;
+  padding: $gutter-spacing;
+  margin: $gutter-spacing 0;
+}
+
+.content-block--grey {
+  background-color: grey;
+  width: 100%;
+  margin: 0;
+}

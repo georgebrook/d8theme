@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.scss"],"names":[],"mappings":"AAAA,MAAM,kCAAA,CAAA,0BAAA","file":"../test.min.css","sourcesContent":[".body {\n  transform: translateX(30px);\n}\n"]}

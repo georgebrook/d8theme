@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Drupal related override styles.
+ *
+ * Tabs styles.
+ *
+**/
+
+@import "../variables/colours";
+@import "../variables/utilities";
+@import "../partials/effects";
+
+.site-content .edit-tabs {
+  display: table;
+  ul {
+    list-style: none;
+    margin: 0 0 2rem;
+    li {
+      display: inline-block;
+      a {
+        background: $white;
+        text-decoration: none;
+        border-radius: $border-radius-medium;
+        padding: 0.4rem 1.2rem 0.5rem;
+        margin-right: 1rem;
+        border: $border $brand;
+        @include transition(0.15);
+        &:hover {
+          background: $brand;
+          color: $white;
+        }
+      }
+    }
+  }
+}

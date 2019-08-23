@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Message and alert styles.
+ *
+**/
+
+@import "../variables/colours";
+@import "../variables/utilities";
+
+.message {
+  border: 0.2rem solid;
+  font-size: $font-size-h3;
+  padding: $gutter-spacing;
+  border-radius: $border-radius-medium;
+  color: $black;
+  font-weight: bold;
+  margin-bottom: $gutter-spacing;
+  background: $white;
+}
+
+.message--status {
+  border-color: $status-colour;
+}
+
+.message--warning {
+  border-color: $warning-colour;
+}
+
+.message--error {
+  border-color: $error-colour;
+}
+
+.status-block {
+  display: inline-block;
+  padding: $gutter-spacing / 4 $gutter-spacing / 2;
+  background: $status-colour;
+  color: $white;
+}
+
+@media (min-width: $screen-mobile) {
+  .message {
+    border-width: 0.3rem;
+    font-size: $font-size-h2;
+  }
+}

@@ -1,0 +1,83 @@
+/**
+ * @file
+ * Facet styling, similar to checkbox styling.
+ *
+**/
+
+.search-facets h2 {
+  margin-top: 0;
+  border-bottom: 1px solid $key-line;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.facets--checkbox {
+  .facet-item a {
+    color: $black;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+  }
+  .facet-item__status {
+    display: inline-block;
+    width: calc(1rem + 6px);
+    height: calc(1rem + 6px);
+    box-sizing: border-box;
+    border-radius: $border-radius-small;
+    border: $border grey;
+    z-index: 0;
+    left: 0;
+    margin: 0;
+    top: 0.3rem;
+    margin-right: 0.6rem;
+    position: relative;
+    background-color: $white;
+  }
+  .facet-item__status--active {
+    background-color: grey;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 10px;
+      background: transparent;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      left: 4px;
+      border-radius: 0;
+      top: 1px;
+    }
+  }
+}
+
+.facet-block__title {
+  border-top: $border $key-line;
+  padding: $gutter-spacing 0;
+  margin: 0;
+  padding-right: $gutter-spacing;
+}
+
+.facet-block {
+  .form-text,
+  .form-textarea,
+  .form-email,
+  .form-tel,
+  select {
+    width: 100%;
+    margin: $gutter-spacing / 2 0;
+  }
+  .form-composite legend,
+  label {
+    display: none;
+  }
+}
+
+@media (min-width: $screen-tablet) {
+  .search-facets h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,24 @@
+theme.minimum:
+  label: Minimum (< 480px)
+  mediaQuery: 'all and (max-width: 480px)'
+  weight: '1'
+  multipliers:
+    - '1x'
+theme.mobile:
+  label: Mobile (> 480px)
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: '1'
+  multipliers:
+    - '1x'
+theme.tablet:
+  label: Tablet (768px)
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: '1'
+  multipliers:
+    - '1x'
+theme.full:
+  label: Full (1024px)
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: '1'
+  multipliers:
+    - '1x'

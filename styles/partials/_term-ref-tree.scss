@@ -1,0 +1,50 @@
+.site-content ul.term-reference-tree-level {
+  margin: 0;
+  li {
+    position: relative;
+    padding: 0;
+    margin: $gutter-spacing / 2 0;
+    &::before {
+      display: none;
+    }
+  }
+
+  ul.term-reference-tree-level {
+    padding-left: 2.6rem;
+    margin: 0;
+  }
+
+  .form-item {
+    margin: 0;
+  }
+}
+
+.js {
+  .site-content ul.term-reference-tree-level ul.term-reference-tree-level {
+    padding-left: 4.2rem;
+  }
+  .term-reference-tree-button {
+    pointer-events: none;
+    position: absolute;
+    left: 2rem;
+    top: 0.5rem;
+    background: url('../../#{$images}/common/chevron--mayoral.svg') 3px 0 no-repeat;
+    transform: rotate(270deg);
+    background-size: contain;
+    cursor: pointer;
+    height: 1.4rem;
+    width: 1.6rem;
+
+    &.term-reference-tree-collapsed {
+      transform: rotate(90deg);
+      top: 0.7rem;
+    }
+
+    + .check-custom .state label {
+      padding-left: $gutter-spacing;
+      text-decoration: underline;
+      font-weight: 600;
+      color: $brand;
+    }
+  }
+}
