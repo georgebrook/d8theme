@@ -8,7 +8,7 @@
 **/
 
 $grid-columns: 12;
-@import "variables/utilities";
+@import "utilities/variables";
 
 $breakpoints: md $screen-tablet $screen-tablet,
   lg $screen-full $screen-full !default;

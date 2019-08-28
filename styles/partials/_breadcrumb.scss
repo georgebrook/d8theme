@@ -4,70 +4,16 @@
  *
 **/
 
-@import "../variables/utilities";
+@import "../utilities/variables";
 
 /**
  * @file
  * Styles for breadcrumbs.
 */
 
-$breadcrumb-divider: #e7e7e7; // Colour matching estate feature.
-
 .breadcrumb {
-  padding: 2rem 0 $gutter-spacing / 2;
-  line-height: 1.2;
-  border-bottom: $border $breadcrumb-divider;
-  margin-bottom: $gutter-spacing * 2;
-}
-
-.site-content .breadcrumb ol {
-  margin: 0;
-  padding: 0;
-}
-
-[dir="rtl"] .breadcrumb ol {
-  // This is required to win over specificity of [dir="rtl"] ol
-  margin-right: 0;
-}
-
-.site-content .breadcrumb ol li {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0 0 1.2rem $gutter-spacing * 2;
-  padding: 0;
-  position: relative;
-  a {
-    text-decoration: none;
-    font-weight: 400;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &:first-child {
-    margin: 0;
-    &::before {
-      display: none;
-    }
-  }
-
-  &:last-child {
-    font-weight: bold;
-    color: $brand;
-
-    a {
-      font-weight: bold;
-    }
-  }
-}
-
-.breadcrumb ol li::before {
-  content: '';
-  position: absolute;
-  top: 0.3rem;
-  left: -2.2rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background: url('../../#{$images}/icons/icon-breadcrumb-arrow.svg') no-repeat;
-  background-size: contain;
+  //padding: 2rem 0 $gutter-spacing / 2;
+  //line-height: 1.2;
+  //border-bottom: $border $breadcrumb-divider;
+  //margin-bottom: $gutter-spacing * 2;
 }

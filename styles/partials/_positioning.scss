@@ -3,7 +3,7 @@
  * Positioning helper class styles.
  *
 **/
-@import "../variables/positioning";
+@import "../utilities/positioning";
 
 // Make use of the positioning mixin which uses these parameters:
 // position($x, $y, $xShift, $yShift, $zShift: 0, $deg: 0, $from: 'top', $xfrom: 'left')

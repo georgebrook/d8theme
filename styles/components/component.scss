@@ -3,16 +3,16 @@
  * General component styles.
  *
 **/
-
-@import "../variables/utilities";
-@import "../variables/positioning";
-@import "../variables/typography";
+@import "../utilities/variables";
+@import "../utilities/positioning";
+@import "../utilities/typography";
 
 .component {
   position: relative;
   margin-bottom: $gutter-spacing;
   display: inline-block;
   width: 100%;
+
   .form-text,
   .form-textarea,
   .form-email,
@@ -31,10 +31,6 @@
   }
 }
 
-.col-fill > .component {
-  height: 100%;
-}
-
 .component__row {
   margin-bottom: $gutter-spacing;
 }
@@ -45,6 +41,7 @@
 
 .component__link {
   margin-bottom: $gutter-spacing;
+
   a {
     text-decoration: underline;
   }
@@ -73,64 +70,11 @@
 .component__image {
   overflow: hidden;
   display: block;
+
   img {
     height: auto;
     width: 100%;
   }
-}
-
-// Reusable global component modifiers.
-.component.component--link-blocks {
-  background: transparent;
-  margin-bottom: 0;
-
-  a {
-    display: block;
-    height: 10rem;
-    margin-bottom: $gutter-spacing;
-  }
-  .component__image {
-    float: left;
-    height: 10rem;
-    width: 10rem;
-  }
-  .component__text {
-    position: relative;
-    float: left;
-    height: 10rem;
-    width: calc(100% - 10rem);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-  .heading--sub {
-    position: absolute;
-    top: 50%;
-    font-size: $font-size-h3;
-    transform: translateY(-50%);
-    width: calc(100% - #{$gutter-spacing} * 2);
-    margin: 0;
-    margin-bottom: 0.6rem;
-  }
-}
-
-.component--cta {
-  padding-bottom: $gutter-spacing;
-  .heading--alt {
-    margin-top: 0;
-  }
-  .button {
-    margin-right: $gutter-spacing;
-  }
-}
-
-.component__text--chevron {
-  background: url('../../../#{$images}/common/chevron--mayoral.svg') no-repeat 95% center;
-}
-
-.component--featured-list .component__text--chevron {
-  background-position: right center;
 }
 
 @media (min-width: $screen-mobile) {
@@ -148,6 +92,7 @@
   .component__image {
     display: flex;
     position: relative;
+
     img {
       width: auto;
       position: absolute;
@@ -168,10 +113,6 @@
   .component--cta p {
     display: inline;
   }
-  .component--featured-list .component--link-blocks .heading--sub {
-    position: static;
-    transform: none;
-  }
 }
 
 @media (min-width: $screen-full) {
@@ -179,6 +120,7 @@
     display: flex;
     position: relative;
     max-height: none;
+
     img {
       width: 100%;
       transform: none;

@@ -1,1 +1,1 @@
-{"version":3,"sources":["layout/main.theme.scss"],"names":[],"mappings":"AAAA,cAAA,eAAA,CAAA,4BAAA,eAAA","file":"../../layout/main.theme.min.css","sourcesContent":["/**\n * @file\n * Main theme layout styles.\n *\n**/\n\n@import \"../variables/colours\";\n\n.page-wrapper {\n  background: grey;\n  .main-content {\n    background: $white;\n  }\n}\n"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"../../layout/main.theme.min.css","sourcesContent":[]}

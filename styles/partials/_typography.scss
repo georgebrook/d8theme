@@ -3,9 +3,9 @@
  * Typography styles.
  *
 **/
-@import "../variables/typography";
-@import "../variables/colours";
-@import "../variables/utilities";
+@import "../utilities/typography";
+@import "../utilities/colours";
+@import "../utilities/variables";
 
 * {
   -webkit-font-smoothing: antialiased;

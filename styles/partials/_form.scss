@@ -3,7 +3,7 @@
  * Form styles.
  *
 **/
-@import "../variables/utilities";
+@import "../utilities/variables";
 
 input {
   &:-webkit-autofill,
@@ -47,7 +47,7 @@ select {
   padding: 1.3rem;
   outline: 0;
   width: 100%;
-  border: $border $border-color;
+  border: $border grey;
   border-radius: $border-radius-medium;
   background: $white;
   margin-bottom: $gutter-spacing;

@@ -4,17 +4,11 @@
  *
 **/
 
-@import "../variables/utilities";
-@import "../variables/colours";
+@import "../utilities/variables";
+@import "../utilities/colours";
 
 .content-block {
-  background-color: $white;
-  padding: $gutter-spacing;
-  margin: $gutter-spacing 0;
-}
-
-.content-block--grey {
-  background-color: grey;
-  width: 100%;
-  margin: 0;
+  //background-color: $white;
+  //padding: $gutter-spacing;
+  //margin: $gutter-spacing 0;
 }

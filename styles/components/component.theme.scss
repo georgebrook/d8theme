@@ -1,11 +1,10 @@
 /**
  * @file
- * General component styles.
+ * General component theme styles.
  *
 **/
-
-@import "../variables/colours";
-@import "../variables/typography";
+@import "../utilities/colours";
+@import "../utilities/typography";
 
 .component {
   background: $white;
@@ -14,6 +13,7 @@
   legend {
     color: $brand;
     font-size: $font-size-h4;
+
     span {
       font-weight: 400;
     }
