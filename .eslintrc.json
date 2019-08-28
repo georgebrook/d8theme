@@ -22,6 +22,7 @@
     "CKEDITOR": true
   },
   "rules": {
+    "func-names": "off",
     "prettier/prettier": "error",
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],

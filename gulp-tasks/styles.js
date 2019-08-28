@@ -9,11 +9,6 @@ const strip_css_comments = require('gulp-strip-css-comments');
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
-const size = require('gulp-size');
-const notify = require('gulp-notify');
-const s = size({
-  showFiles: true
-});
 
 const paths = {
   styles: 'styles',
@@ -52,12 +47,5 @@ gulp.task('build:styles', () =>
     )
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('sourcemaps'))
-    .pipe(gulp.dest(`./${paths.css}`))
-    .pipe(s)
-    .pipe(
-      notify({
-        onLast: true,
-        message: () => `Total CSS Size: ${s.prettySize}`,
-      })
-    )
+    .pipe(gulp.dest(paths.css))
 );

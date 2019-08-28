@@ -16,11 +16,20 @@ gulp.task(
 );
 gulp.task('images', gulp.series('clean:images', 'minify:images'));
 
-gulp.task('watch', () => {
-  gulp.watch(`${paths.styles}/**/*.scss`, gulp.parallel('styles'));
-  gulp.watch(`${paths.scripts}/**/*.js`, gulp.parallel('scripts'));
-  gulp.watch(`${paths.images}/**/*`, gulp.parallel('images'));
-});
+gulp.task('watch:styles', () =>
+  gulp.watch(`${paths.styles}/**/*.scss`, gulp.series('styles'))
+);
 
-gulp.task('dev', gulp.series('styles', 'scripts', 'images'));
-gulp.task('default', gulp.series('dev', 'watch'));
+gulp.task('watch:scripts', () =>
+  gulp.watch(`${paths.scripts}/**/*.js`, gulp.series('scripts'))
+);
+
+gulp.task('watch:images', () =>
+  gulp.watch(`${paths.images}`, gulp.series('images'))
+);
+gulp.task(
+  'watch',
+  gulp.parallel('watch:styles', 'watch:scripts', 'watch:images')
+);
+
+gulp.task('default', gulp.series('styles', 'scripts', 'images', 'watch'));

@@ -8,11 +8,13 @@ const paths = {
 };
 
 gulp.task('clean:scripts', () =>
-  gulp.src(`./${paths.js}/**/*.js*`).pipe(clean()),
+  gulp.src(`./${paths.js}/**/*.js*`, { allowEmpty: true }).pipe(clean())
 );
 
 gulp.task('clean:styles', () =>
-  gulp.src(`./${paths.css}/**/*.css*`).pipe(clean()),
+  gulp.src(`./${paths.css}/**/*.css*`, { allowEmpty: true }).pipe(clean())
 );
 
-gulp.task('clean:images', () => gulp.src(`./${paths.img}`).pipe(clean()));
+gulp.task('clean:images', () =>
+  gulp.src(`./${paths.img}`, { allowEmpty: true }).pipe(clean())
+);

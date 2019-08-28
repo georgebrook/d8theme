@@ -6,10 +6,6 @@
 @import "../variables/utilities";
 @import "../variables/colours";
 
-body {
-  transform: translateX(100px);
-}
-
 .skip-link {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);

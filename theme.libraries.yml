@@ -4,12 +4,12 @@ core:
       dist/css/reset.min.css: {}
       dist/css/grid.min.css: {}
       dist/css/core.min.css: {}
-      dist/css/layout/base.min.css: {}
+      dist/css/layout/main.min.css: {}
     theme:
-      dist/css/layout/base.theme.css: {}
+      dist/css/layout/main.theme.min.css: {}
 
   js:
-    dist/js/base.js: {}
+    dist/js/main.min.js: {}
 
   dependencies:
     - core/jquery

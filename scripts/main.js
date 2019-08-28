@@ -1,12 +1,14 @@
 /**
  * Theme Main JS.
  */
-(($, Drupal, settings) => {
+(($, Drupal) => {
   Drupal.behaviors.themeMain = {
-    attach: context => {
-      this.themeFunction(context, settings);
+    attach(context) {
+      this.themeFunction(context);
     },
 
-    themeFunction: context => context + Drupal + settings,
+    themeFunction(context) {
+      console.log(context);
+    },
   };
-})(jQuery, Drupal, drupalSettings);
+})(jQuery, Drupal);
